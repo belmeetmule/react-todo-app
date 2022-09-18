@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import TodosList from "./TodosList"
+import Header from "./Header";
 
 class TodoContainer extends React.Component{
     state = {
@@ -22,14 +24,10 @@ class TodoContainer extends React.Component{
     }
     render(){
         return (
-        <div>
-            <h1>To do s</h1>
-            <ul>
-                {this.state.todos.map(item =>(
-                    <li> {item.title} </li>
-                ))}
-            </ul>
-        </div>
+            <div>
+                <Header />
+                <TodosList todos={this.state.todos} />
+            </div>
         )
     }
 }
