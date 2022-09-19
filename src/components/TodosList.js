@@ -5,10 +5,14 @@ class TodosList extends Component{
     render(){
         return(
             <div>
-            <h1>To do s</h1>
                 <ul>
                     {this.props.todos.map(todo =>(
-                        <TodoItem key = {todo.id} todo = {todo} />
+                        <TodoItem 
+                            key = {todo.id} 
+                            todo = {todo} 
+                            handleChangeProps = {this.props.handleChangeProps}
+                            deleteTodoProps = {this.props.deleteTodoProps}
+                        />
                     ))}
                 </ul>
             </div>
