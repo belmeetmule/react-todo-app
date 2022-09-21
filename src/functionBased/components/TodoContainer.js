@@ -74,6 +74,7 @@ const TodoContainer = () => {
   }, [todos])
 
   return (
+    <>
     <div className="container">
       <div className="inner">
         <Header />
@@ -86,6 +87,8 @@ const TodoContainer = () => {
         />
       </div>
     </div>
+   
+    </>
   )
 }
 
